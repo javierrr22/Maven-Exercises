@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('mensaje') {
       steps {
-        echo 'iniciando compilación'
+        echo 'iniciando compilaciÃ³n'
       }
     }
 
@@ -11,7 +11,7 @@ pipeline {
       parallel {
         stage('cambio de rama') {
           steps {
-            sh 'git checkout answer4'
+            sh 'git switch answer4'
           }
         }
 
@@ -24,7 +24,7 @@ pipeline {
       }
     }
 
-    stage('compilaci�n') {
+    stage('compilación') {
       steps {
         sh 'mvn clean install'
         echo 'Chachi'
